@@ -1,0 +1,44 @@
+header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: rgba(0,0,0,0.4);
+}
+
+.UserControl {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  border-radius: 5px;
+  transition: all 500ms;
+}
+
+.UserControl.Open {
+  background-color: white;
+  color: black;
+}
+
+.UserCard {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 5px;
+  height: 40px;
+  transition: background-color 300ms;
+}
+
+.UserCard:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.UserCard img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.ControlItem:hover {
+  cursor: pointer;
+  color: #00adee;
+}

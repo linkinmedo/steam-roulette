@@ -1,0 +1,12 @@
+.Content {
+  display: flex;
+  min-height: calc(100vh - 50px);
+}
+
+.Roulette {
+  flex-basis: 66.66%;
+}
+
+.UserDetails {
+  flex-basis: 33.33%;
+}
