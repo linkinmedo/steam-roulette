@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { connect } from "react-redux";
 import { login } from "./actions";
 import "./App.css";
@@ -7,6 +7,8 @@ import api from "./api.js";
 const Dashboard = React.lazy(() => import("./components/Dashboard.js"));
 
 function App(props) {
+  const [isUpdated, setIsUpdated] = useState(false);
+
   // Fetch and set user and games
   const getUserData = async steamID => {
     const [userDetails, games] = await Promise.all([
@@ -33,9 +35,15 @@ function App(props) {
       });
   };
 
+  if (!isUpdated && props.loggedin && props.user) {
+    console.log("hello");
+    getUserData(props.user.steamid);
+    setIsUpdated(true);
+  }
+
   return (
     <div className="App">
-      {props.user ? (
+      {props.loggedin ? (
         <Suspense fallback={<div>lodaing...</div>}>
           <Dashboard />
         </Suspense>
@@ -48,6 +56,7 @@ function App(props) {
 
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
+    loggedin: state.loggedin,
     user: state.user,
     games: state.games
   };
