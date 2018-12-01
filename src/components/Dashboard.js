@@ -2,14 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import "./Dashboard.css";
 import Header from "./Header.js";
+import UserGames from "./UserGames.js";
 
 function Dashboard(props) {
   return (
     <div className="Dashboard">
       <Header avatar={props.user.avatar} personaName={props.user.personaname} />
       <div className="Content">
-        <div className="Roulette">{/*hello*/}</div>
-        <div className="UserDetails">{/*hello*/}</div>
+        <div className="Roulette">hello</div>
+        <UserGames />
       </div>
     </div>
   );

@@ -7,6 +7,62 @@
   flex-basis: 66.66%;
 }
 
-.UserDetails {
+.UserGames {
   flex-basis: 33.33%;
+  /* text-align: left; */
 }
+
+.UserGames h2 {
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  margin: 0;
+  padding: 25px 0;
+}
+
+.GamesList {
+  height: calc(100vh - 128px);
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ListGame {
+  padding: 10px;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+}
+
+.ListGame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.ListGame:hover {
+  padding: 10px;
+  background: transparent;
+}
+
+.ListSection {
+  background: rgba(0,0,0,0.4);
+}
+
+.ListSection h3 {
+  margin: 0;
+  padding: 25px 0;
+}
+
+.AccountDetails {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 18px 0;
+  color: black;
+}
+
