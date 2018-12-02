@@ -16,9 +16,13 @@ function Game(props) {
         {props.completeGame ? "Complete" : "Uncomplete"}
       </button>
       <img
-        src={`http://media.steampowered.com/steamcommunity/public/images/apps/${
-          props.game.appid
-        }/${props.game.img_logo_url}.jpg`}
+        src={
+          props.game.img_logo_url
+            ? `http://media.steampowered.com/steamcommunity/public/images/apps/${
+                props.game.appid
+              }/${props.game.img_logo_url}.jpg`
+            : "https://c.slashgear.com/wp-content/uploads/2016/12/steam-games.jpg"
+        }
         alt={props.game.name}
       />
     </li>
