@@ -30,7 +30,7 @@ function Game(props) {
 }
 
 function GamesList(props) {
-  console.log("first", props);
+  const completed = props.games.completedGames.length > 0;
   return (
     <ul className="GamesList">
       {props.games.uncompletedGames.map(game => {
@@ -42,18 +42,21 @@ function GamesList(props) {
           />
         );
       })}
-      <li className="ListSection">
-        <h3>Completed</h3>
-      </li>
-      {props.games.completedGames.map(game => {
-        return (
-          <Game
-            game={game}
-            uncompleteGame={props.uncompleteGame}
-            key={game.appid}
-          />
-        );
-      })}
+      {completed && (
+        <li className="ListSection">
+          <h3>Completed</h3>
+        </li>
+      )}
+      {completed &&
+        props.games.completedGames.map(game => {
+          return (
+            <Game
+              game={game}
+              uncompleteGame={props.uncompleteGame}
+              key={game.appid}
+            />
+          );
+        })}
     </ul>
   );
 }
