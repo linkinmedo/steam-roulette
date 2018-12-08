@@ -2,10 +2,10 @@ import axios from "axios";
 
 const apiConfig = {
   key: "EB6035700F012A291BF20EEEDC2DBBC9",
-  checkUser: "http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/",
+  checkUser: "https://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/",
   userDetails:
-    "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/",
-  userGames: "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/"
+    "https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/",
+  userGames: "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/"
 };
 
 const getSteamID = username => {
