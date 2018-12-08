@@ -15,7 +15,7 @@ function App(props) {
       api.getUserDetails(steamID),
       api.getUserGames(steamID)
     ]).catch(error => {
-      console.log("hello");
+      console.error(error);
     });
     props.login(
       userDetails.data.response.players[0],
@@ -36,7 +36,6 @@ function App(props) {
   };
 
   if (!isUpdated && props.loggedin && props.user) {
-    console.log("hello");
     getUserData(props.user.steamid);
     setIsUpdated(true);
   }

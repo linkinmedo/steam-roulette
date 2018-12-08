@@ -21,7 +21,7 @@ function Game(props) {
             ? `http://media.steampowered.com/steamcommunity/public/images/apps/${
                 props.game.appid
               }/${props.game.img_logo_url}.jpg`
-            : "https://c.slashgear.com/wp-content/uploads/2016/12/steam-games.jpg"
+            : "../assets/steam-games.png"
         }
         alt={props.game.name}
       />

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "./Dashboard.css";
 import Header from "./Header.js";
+import Roulette from "./Roulette.js";
 import UserGames from "./UserGames.js";
 
 function Dashboard(props) {
@@ -9,7 +10,7 @@ function Dashboard(props) {
     <div className="Dashboard">
       <Header avatar={props.user.avatar} personaName={props.user.personaname} />
       <div className="Content">
-        <div className="Roulette">hello</div>
+        <Roulette />
         <UserGames />
       </div>
     </div>

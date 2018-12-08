@@ -5,6 +5,10 @@
 
 .Roulette {
   flex-basis: 66.66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .UserGames {
