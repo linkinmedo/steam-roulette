@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import fallbackImage from "../assets/steam-games.png";
 import { completeGame, uncompleteGame } from "../actions";
 
 function Game(props) {
@@ -21,7 +22,7 @@ function Game(props) {
             ? `http://media.steampowered.com/steamcommunity/public/images/apps/${
                 props.game.appid
               }/${props.game.img_logo_url}.jpg`
-            : "../assets/steam-games.png"
+            : fallbackImage
         }
         alt={props.game.name}
       />

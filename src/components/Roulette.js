@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { sample } from "lodash";
 import { completeGame } from "../actions";
+import fallbackImage from "../assets/steam-games.png";
 
 function Roulette(props) {
   const [isInitial, setIsInitial] = useState(true);
@@ -39,7 +40,7 @@ function Roulette(props) {
                 ? `http://media.steampowered.com/steamcommunity/public/images/apps/${
                     game.appid
                   }/${game.img_logo_url}.jpg`
-                : "../assets/steam-games.png"
+                : fallbackImage
             }
             alt={game.name}
           />
