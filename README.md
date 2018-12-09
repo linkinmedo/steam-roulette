@@ -1,4 +1,5 @@
 This application is still in development!
+And it might never finish :)
 
 # Steam Roulette
 
